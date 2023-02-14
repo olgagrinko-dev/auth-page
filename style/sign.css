@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-family: 'Poppins';
+}
+
+body {
+    width: 1420px;
+    margin: auto;
+    background: #F5F5F5;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    width: 710px;
+    height: 990px;
+    background: #E2F0FF;
+}
+
+.img-1 {
+    background-image: url(../assets/1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 525px;
+    height: 390px;
+    margin: 160px auto 60px;
+}
+
+.ad {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto 180px;
+}
+
+.ad h1 {
+    width: 400px;
+    font: 600 26px;
+    text-align: center;
+    color: #292731;
+}
+
+.ad p {
+    width: 380px;
+    font: 400 16px;
+    text-align: center;
+    color: #455360;
+    margin-top: 23px;
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 166px 155px 295px 135px;
+}
+
+.img-2 {
+    background-image: url(../assets/2.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 28px;
+    margin-bottom: 10px;
+}
+
+.information h1 {
+    font-family: 600 30px;
+    color: #292731;
+    margin-bottom: 12px;
+}
+
+.information p {
+    font: 400 16px;
+    color: #292731;
+    margin-bottom: 62px;
+}
+
+.e-mail p {
+    font: 500 16px;
+    color: #455360;
+    margin-bottom: 10px;
+}
+
+.input-1 {
+    width: 440px;
+    height: 48px;
+    background: #ECF2F7;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    font: 400 16px;
+    color: #7B8389;
+}
+
+.password p {
+    font: 500 16px;
+    color: #455360;
+    margin-bottom: 10px;
+}
+
+.input-2 {
+    width: 440px;
+    height: 48px;
+    background: #ECF2F7;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    font: 400 16px;
+    color: #7B8389;
+}
+
+.password-2 p {
+    font: 500 16px;
+    color: #455360;
+    margin-bottom: 10px;
+}
+
+.input-3 {
+    width: 440px;
+    height: 48px;
+    background: #ECF2F7;
+    border-radius: 4px;
+    margin-bottom: 44px;
+    font: 400 16px;
+    color: #7B8389;
+}
+.but button {
+    background: #4C70FF;
+    border-radius: 8px;
+    width: 440px;
+    height: 48px;
+    font-family: 500 20px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.but p {
+    font: 500 16px;
+    color: #292731;
+}
+
+.link-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.link-2 div {
+    font: 500 16px;
+    color: #292731;
+}
+
+.link-2 p {
+    font: 500 16px;
+    color: #66BCE8;
+}
