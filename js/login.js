@@ -5,23 +5,27 @@
 // то вывести alert “Вы успешно зарегистрированы / авторизованы в системе”, в зависимости 
 // от страницы. Если проверки не прошли, то вывсти alert с соответствующим сообщением об ошибке
 
-const btn = document.querySelector(`button`);
+const btn = document.querySelector(`.login-btn`);
 const inp1 = document.querySelector(`.input-1`);
 const inp2 = document.querySelector(`.input-2`);
 
 btn.addEventListener(`click`, function () {
+    console.log(`test`);
     try {
-        let val1 = inp1.value;
+        let mail = inp1.value;
         let pwd = inp2.value;
 
-        if (!/^[a-z0-9_\.-]+@[a-z]+.[a-z]{1,3}$/gm.test(val1) && !/^\+[0-9]+ \([0-9]+\)+ [0-9]+\-[0-9]+\-[0-9]+$/gm.test(val2));
-        alert(`адрес эл. почты или номер телефона введен неверно`);
+        if (!/^[a-z0-9_\.-]+@[a-z]+\.[a-z]{2,3}$/gm.test(mail) || !/^[\d\+][\d\(\)\ -]{4,14}\d$/.test(mail)) {
+            alert(`Такой аккаунт не зарегистрирован`);
+            inp1.value = ``;            
 
-        if (!/^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd));
-        alert(`пароль не соответствует требованиям`);
+        } else if (!/^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) {
+            alert(`Неверный пароль`);
+            inp2.value = ``;           
 
-        if (/^[a-z0-9_\.-]+@[a-z]+.[a-z]{1,3}$/gm.test(val1) && /^\+[0-9]+ \([0-9]+\)+ [0-9]+\-[0-9]+\-[0-9]+$/gm.test(val2) && /^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd));
-        alert(`регистрация прошла успешно`);
+        } else if (/^[a-z0-9_\.-]+@[a-z]+.[a-z]{2,3}$/gm.test(mail) || /^[\d\+][\d\(\)\ -]{4,14}\d$/.test(mail) && /^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) {
+            alert(`Добро пожаловать!`);
+        }
 
     } catch (error) {
         alert(error.message);

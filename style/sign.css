@@ -128,7 +128,7 @@ main {
     font: 400 16px;
     color: #7B8389;
 }
-.but button {
+.sign-btn {
     background: #4C70FF;
     border-radius: 8px;
     width: 440px;
@@ -136,11 +136,6 @@ main {
     font-family: 500 20px;
     color: #FFFFFF;
     margin-bottom: 20px;
-}
-
-.but p {
-    font: 500 16px;
-    color: #292731;
 }
 
 .link-2 {
