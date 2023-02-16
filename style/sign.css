@@ -95,6 +95,8 @@ main {
     margin-bottom: 30px;
     font: 400 16px;
     color: #7B8389;
+    border-width: 0;
+    border-width: 0;
 }
 
 .password p {
@@ -111,6 +113,7 @@ main {
     margin-bottom: 30px;
     font: 400 16px;
     color: #7B8389;
+    border-width: 0;
 }
 
 .password-2 p {
@@ -125,9 +128,14 @@ main {
     background: #ECF2F7;
     border-radius: 4px;
     margin-bottom: 44px;
+    border-width: 0;
+}
+
+password ::placeholder {
     font: 400 16px;
     color: #7B8389;
 }
+
 .sign-btn {
     background: #4C70FF;
     border-radius: 8px;
@@ -136,11 +144,13 @@ main {
     font-family: 500 20px;
     color: #FFFFFF;
     margin-bottom: 20px;
+    border-width: 0;
 }
 
 .link-2 {
     display: flex;
     flex-direction: row;
+    margin: auto;
 }
 
 .link-2 div {

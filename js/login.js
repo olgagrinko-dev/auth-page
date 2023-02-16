@@ -16,7 +16,7 @@ btn.addEventListener(`click`, function () {
         let pwd = inp2.value;
 
         if (!/^[a-z0-9_\.-]+@[a-z]+\.[a-z]{2,3}$/gm.test(mail) || !/^[\d\+][\d\(\)\ -]{4,14}\d$/.test(mail)) {
-            alert(`Такой аккаунт не зарегистрирован`);
+            alert(`Неверный логин`);
             inp1.value = ``;            
 
         } else if (!/^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) {
