@@ -15,7 +15,7 @@ btn.addEventListener(`click`, function () {
         let mail = inp1.value;
         let pwd = inp2.value;
 
-        if (!/^[a-z0-9_\.-]+@[a-z]+\.[a-z]{2,3}$/gm.test(mail) || !/^[\d\+][\d\(\)\ -]{4,14}\d$/.test(mail)) {
+        if (!/^[a-z0-9_\.-]+@[a-z]+\.[a-z]{2,3}$/gm.test(mail) || !/^\+[0-9]+ \([0-9]+\)+ [0-9]+\-[0-9]+\-[0-9]+$/gm.test(mail)) {
             alert(`Неверный логин`);
             inp1.value = ``;            
 
@@ -23,7 +23,7 @@ btn.addEventListener(`click`, function () {
             alert(`Неверный пароль`);
             inp2.value = ``;           
 
-        } else if (/^[a-z0-9_\.-]+@[a-z]+.[a-z]{2,3}$/gm.test(mail) || /^[\d\+][\d\(\)\ -]{4,14}\d$/.test(mail) && /^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) {
+        } else if (/^[a-z0-9_\.-]+@[a-z]+.[a-z]{2,3}$/gm.test(mail) || /^\+[0-9]+ \([0-9]+\)+ [0-9]+\-[0-9]+\-[0-9]+$/gm.test(mail) && /^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) {
             alert(`Добро пожаловать!`);
         }
 
