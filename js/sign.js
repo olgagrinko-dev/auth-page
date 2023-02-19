@@ -10,30 +10,26 @@ const inp1 = document.querySelector(`.input-1`);
 const inp2 = document.querySelector(`.input-2`);
 const inp3 = document.querySelector(`.input-3`);
 
+function isValid(mail, pwd, conPwd) {
+    if (!/^[a-z0-9_\.-]+@[a-z]+\.[a-z]{2,3}$/gm.test(mail) && !/^\+[0-9]+ \([0-9]+\)+ [0-9]+\-[0-9]+\-[0-9]+$/gm.test(mail)) throw new Error(`Некорректный ввод логина!`)
+    if (!/^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) throw new Error(`Некорректный ввод пароля!`)
+    if (pwd !== conPwd) throw new Error (`Пароли не совпадают`)
+}
+
 btn.addEventListener(`click`, function () {
     try {
         let mail = inp1.value;
         let pwd = inp2.value;
-        let pwd2 = inp3.value;
+        let conPwd = inp3.value;
 
-        if (!/^[a-z0-9_\.-]+@[a-z]+\.[a-z]{2,3}$/gm.test(mail) || !/^[\d\+][\d\(\)\ -]{4,14}\d$/.test(mail)) {
-            alert(`Такой аккаунт не зарегистрирован`);
-            inp1.value = ``;
+        isValid(mail, pwd, conPwd)
 
-        } else if (!/^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) {
-            alert(`Неверный пароль`);
-            inp2.value = ``;
-
-        } else if (pwd2 !== pwd) {
-            alert(`Повторите пароль`);
-
-        } else if (/^[a-z0-9_\.-]+@[a-z]+.[a-z]{2,3}$/gm.test(mail) || /^[\d\+][\d\(\)\ -]{4,14}\d$/.test(mail) && /^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) {
-            alert(`Вы успешно зарегистрированы`);
-        }
+        alert(`Вы успешно зарегистрированы`);
+        inp2.value = ``;
 
     } catch (error) {
         alert(error.message);
     }
-
 })
+
 

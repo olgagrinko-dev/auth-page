@@ -9,27 +9,26 @@ const btn = document.querySelector(`.login-btn`);
 const inp1 = document.querySelector(`.input-1`);
 const inp2 = document.querySelector(`.input-2`);
 
+function isValid(mail, pwd) {
+    if (!/^[a-z0-9_\.-]+@[a-z]+\.[a-z]{2,3}$/gm.test(mail) && !/^\+[0-9]+ \([0-9]+\)+ [0-9]+\-[0-9]+\-[0-9]+$/gm.test(mail)) throw new Error(`Некорректный ввод логина!`)
+    if (!/^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) throw new Error(`Некорректный ввод пароля!`)
+}
+
 btn.addEventListener(`click`, function () {
-    console.log(`test`);
-    try {
+    try {        
         let mail = inp1.value;
         let pwd = inp2.value;
 
-        if (!/^[a-z0-9_\.-]+@[a-z]+\.[a-z]{2,3}$/gm.test(mail) || !/^\+[0-9]+ \([0-9]+\)+ [0-9]+\-[0-9]+\-[0-9]+$/gm.test(mail)) {
-            alert(`Неверный логин`);
-            inp1.value = ``;            
+        isValid(mail, pwd)
 
-        } else if (!/^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) {
-            alert(`Неверный пароль`);
-            inp2.value = ``;           
-
-        } else if (/^[a-z0-9_\.-]+@[a-z]+.[a-z]{2,3}$/gm.test(mail) || /^\+[0-9]+ \([0-9]+\)+ [0-9]+\-[0-9]+\-[0-9]+$/gm.test(mail) && /^[A-Za-z0-9!@#$%^&*()_+-=]{8,}$/gm.test(pwd)) {
-            alert(`Добро пожаловать!`);
-        }
-
+        alert(`Добро пожаловать!`);
+        inp2.value = ``;
+        
     } catch (error) {
         alert(error.message);
     }
 })
+
+
 
 

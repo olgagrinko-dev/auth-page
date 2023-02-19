@@ -1,8 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-style: normal;
-    font-family: 'Poppins';
+    font-style: normal;    
 }
 
 body {
@@ -41,14 +40,14 @@ main {
 
 .ad h1 {
     width: 400px;
-    font: 600 26px;
+    font: 600 26px 'Poppins';
     text-align: center;
     color: #292731;
 }
 
 .ad p {
     width: 380px;
-    font: 400 16px;
+    font: 400 16px 'Poppins';
     text-align: center;
     color: #455360;
     margin-top: 23px;
@@ -70,70 +69,33 @@ main {
 }
 
 .information h1 {
-    font-family: 600 30px;
+    font: 600 30px 'Poppins';
     color: #292731;
     margin-bottom: 12px;
 }
 
 .information p {
-    font: 400 16px;
+    font: 400 16px 'Poppins';
     color: #292731;
     margin-bottom: 62px;
 }
 
-.e-mail p {
-    font: 500 16px;
+.e-mail p, .password p, .confirm-password p {
+    font: 500 16px 'Poppins';
     color: #455360;
     margin-bottom: 10px;
 }
 
-.input-1 {
+.input-1, .input-2, .input-3 {
     width: 440px;
     height: 48px;
     background: #ECF2F7;
     border-radius: 4px;
     margin-bottom: 30px;
-    font: 400 16px;
+    padding-left: 20px;
+    font: 400 16px 'Poppins';
     color: #7B8389;
-    border-width: 0;
-    border-width: 0;
-}
-
-.password p {
-    font: 500 16px;
-    color: #455360;
-    margin-bottom: 10px;
-}
-
-.input-2 {
-    width: 440px;
-    height: 48px;
-    background: #ECF2F7;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    font: 400 16px;
-    color: #7B8389;
-    border-width: 0;
-}
-
-.password-2 p {
-    font: 500 16px;
-    color: #455360;
-    margin-bottom: 10px;
-}
-
-.input-3 {
-    width: 440px;
-    height: 48px;
-    background: #ECF2F7;
-    border-radius: 4px;
-    margin-bottom: 44px;
-    border-width: 0;
-}
-
-password ::placeholder {
-    font: 400 16px;
-    color: #7B8389;
+    border-width: 0;      
 }
 
 .sign-btn {
@@ -141,7 +103,7 @@ password ::placeholder {
     border-radius: 8px;
     width: 440px;
     height: 48px;
-    font-family: 500 20px;
+    font: 500 20px 'Poppins';
     color: #FFFFFF;
     margin-bottom: 20px;
     border-width: 0;
@@ -154,11 +116,12 @@ password ::placeholder {
 }
 
 .link-2 div {
-    font: 500 16px;
+    font: 500 16px 'Poppins';
     color: #292731;
 }
 
 .link-2 p {
-    font: 500 16px;
+    font: 500 16px 'Poppins';
     color: #66BCE8;
+    padding-left: 10px;
 }
