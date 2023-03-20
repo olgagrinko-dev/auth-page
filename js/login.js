@@ -7,7 +7,7 @@
 
 class Test {
     constructor() {
-        this.isValid();
+        this.loginPage();
     }
 
     isValid(mail, pwd) {
@@ -19,7 +19,7 @@ class Test {
         const btn = document.querySelector(`.login-btn`);
         const inp1 = document.querySelector(`.input-1`);
         const inp2 = document.querySelector(`.input-2`);
-        btn.addEventListener(`click`, function () {
+        btn.addEventListener(`click`, () => {
             try {
                 let mail = inp1.value;
                 let pwd = inp2.value;
